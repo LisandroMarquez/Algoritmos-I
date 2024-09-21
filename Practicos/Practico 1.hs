@@ -205,24 +205,6 @@ onceD (x:y:xs) = x + onceD xs
 !paratodo [0, 0, 0, 0] esCero
 !True
 -}
--- Para evaluar
--- 1)
-esCero :: Int -> Bool
-esCero x = x == 0
-
--- 2)
-esPositivo :: Int -> Bool
-esPositivo x = x > 0
-
--- 3)
-esVocal :: Char -> Bool
-esVocal x = x `elem` "aeiou"
-
--- 4)
-valorAbsoluto :: Int -> Int
-valorAbsoluto x | x >= 0 = x
-                | otherwise = -x
-
 -- a.
 paratodo :: [a] -> (a -> Bool) -> Bool
 paratodo [] _ = True
@@ -259,16 +241,6 @@ productoria (x:xs) prop = prop x * productoria xs prop
 * i. Utilizando la función del apartado anterior, definí la función todosFib :: [Int] -> Bool que dada una lista xs de enteros, devuelva si todos los elementos de la lista pertenecen (o no) a la sucesión de Fibonacci
 -}
 -- funciones aux
-paratodo :: [a] -> (a -> Bool) -> Bool
-paratodo [] _ = True
-paratodo (x:xs) f   | f x = paratodo xs f
-                    | otherwise = False
-
-existe :: [a] -> (a -> Bool) -> Bool
-existe [] _ = False
-existe (x:xs) prop  | prop x = True
-                    | otherwise = existe xs prop
-
 mod1 :: Int -> Int -> Bool
 mod1 x y = mod x y == 0
 
