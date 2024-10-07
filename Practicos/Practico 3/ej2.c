@@ -1,6 +1,7 @@
 // Imports
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
 // Main
 int main(void) {
@@ -12,12 +13,26 @@ int main(void) {
         not b && w                      | False
     */
 
-   // Define vars
-   int x = 4, y = -4,z = 8;
-   _Bool b = 1,  w = 1;
-   char aux1[6], aux2[6], aux3[6]; 
+   //# Init Vars
+   int x, y, z, temp;
+   bool b, w;
+   char aux1[6], aux2[6], aux3[6];
+   //? Solution: x = 4, y = -4, z = 8, b = False (0), w = False (0);
 
-   // Auxiliar
+    printf("Ingrese x: ");
+    scanf("%i", &x);
+    printf("Ingrese y: ");
+    scanf("%i", &y);
+    printf("Ingrese z: ");
+    scanf("%i", &z);
+    printf("Ingrese b (1 → True, 0 → False): ");
+    scanf("%d", &temp); //! No se puede asignar nada con imputs a las variables tipo bool
+    b = temp;
+    printf("Ingrese w (1 → True, 0 → False): ");
+    scanf("%d", &temp); //! No se puede asignar nada con imputs a las variables tipo bool
+    w = temp;
+
+   //% Auxiliar
    if (x % 4 == 0) {
         strcpy(aux1, "True");
    } else {
@@ -30,19 +45,19 @@ int main(void) {
         strcpy(aux2, "False");
     }
 
-    if (!b && w) {
+    if ((b /= 1) && (w == 1)) {
         strcpy(aux3, "True");
     } else {
         strcpy(aux3, "False");
     }
 
-    // Outputs
-    printf("Para cumplir que todas esas condiciones, las variables deben tener los siguientes valores:\n");
-    printf("  x = 4\n");
-    printf("  y = -4\n");
-    printf("  z = 8\n");
-    printf("  b = True\n");
-    printf("  w = True\n");
+    //* Outputs
+    printf("\nVariables asignadas:\n");
+    printf("  x = %i\n", x);
+    printf("  y = %i\n", y);
+    printf("  z = %i\n", z);
+    printf("  b = %i\n", b);
+    printf("  w = %i\n", w);
     printf("Expresiones solicitadas:\n  x mod 4 == 0 = %s\n", aux1 );
     printf("  x + y == 0 && y - x == (-1) * z = %s\n", aux2 );
     printf("  not b && w = %s\n", aux3 );

@@ -3,10 +3,12 @@
 
 // Main
 int main(void) {
-    // Define variables
+    //# Init Vars
     int x = 7;
     int y = 3;
     int z = 5;
+
+    //% Results (& auxs)
     int res1 = x + y + 1;
     int res2 = z * z + y * 45 - 15 * x;
     float aux1 = y - 2;
@@ -15,7 +17,7 @@ int main(void) {
     float res4 = (float)y / 2 * x;  // Forzar división flotante
     _Bool res5 = (y < x * z);
 
-    // Show outputs
+    //* Show outputs
     printf("Variables:\n  x = 7\n  y = 3\n  z = 5\n");
     printf("Resultados:\n  [ x + y + 1 ] es %i\n", res1);
     printf("  [ z * z + y * 45 - 15 * x ] es %i\n", res2);
