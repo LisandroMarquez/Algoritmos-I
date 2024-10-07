@@ -11,7 +11,7 @@ int main(void) {
     //% Required input
     printf("Ingrese x: ");
     scanf("%i", &x);
-    
+
     //! Logic
     x = 5;
 
@@ -40,6 +40,7 @@ int main(void) {
     printf("  x = %i\n  y = %i\n",x , y);
 
     //& Ejercicio c
+    
     //% Required inputs
     printf("\nIngrese x: ");
     scanf("%i", &x);
