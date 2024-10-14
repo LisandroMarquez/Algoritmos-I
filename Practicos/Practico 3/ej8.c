@@ -57,7 +57,7 @@ int main(void)
         i++; // i = i + 1
 
         //* Output
-        printf("\nOutput:\n  x = %i\n  i = %i\n  res = %i\n\n",x , i, res);
+        printf("\nOutput:\n  x = %i\n  i = %i\n  res = %s\n\n",x , i, res ? "true" : "false");
     }
 
     return 0;
